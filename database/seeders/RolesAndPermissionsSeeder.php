@@ -19,7 +19,7 @@ class RolesAndPermissionsSeeder extends Seeder
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
         // create permissions
-        Permission::create(['name' => 'access_log_viewer']);
+        Permission::firstOrCreate(['name' => 'access_log_viewer']);
 
         $roles = ["super_admin", "admin", "author"];
 
